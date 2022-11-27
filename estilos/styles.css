@@ -1,0 +1,77 @@
+.img-navbar{
+    width: 100px;
+}
+.texto-verde{
+    color: rgb(1, 156, 1) !important;
+}
+
+.fondo{
+    background: linear-gradient(rgb(0 0 0 / .7), rgb(0 0 0 /.7));
+}
+
+.tamaño{
+    width: 100%;
+    height: 500px;
+}
+.filtro {
+    filter: brightness(0.4);
+}
+
+.wrap-texto{
+    color: #fff;
+}
+@media screen and (min-width:900px){
+    .wrap-texto{
+        margin-top: 25%;
+    }
+}
+@media screen and (min-width:770px){
+    .wrap-texto{
+        margin-top: 20%;
+    }
+}
+@media screen and (max-width: 620px){
+    .wrap-texto h2{
+        font-size: 30px !important;
+    }
+    .wrap-texto p{
+        font-size: 15px !important;
+    }
+}
+@media screen and (max-width: 480px){
+    .wrap-texto h2{
+        font-size: 25px !important;
+    }
+    .wrap-texto p{
+        font-size: 15px !important;
+    }
+    .slide img{
+        height: 350px;
+    }
+}
+.wrap-texto h2{
+    font-size: 35px;
+}
+.wrap-texto p{
+    font-size: 20px;
+}
+
+.oradores h4{
+    font-size: 15px;
+}
+.texto-tarjetas{
+    font-size: 10px;
+}
+.btn-enviar{
+    background-color: rgb(121, 171, 4);
+}
+.footer-fondo{
+    background-color: #1e5170;
+}
+
+.color{
+    background-color: powderblue; 
+}
+.btn{
+    width: 30%;
+}

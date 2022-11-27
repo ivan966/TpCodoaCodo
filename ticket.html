@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/estilos/styles.css">
+    <link rel="stylesheet" href="/estilos/normalize.css">
+    <script defer src="js/js.js"></script>
+    <title>Comprar Tickets</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html"><img src="img/codoacodo.png" alt="" class="img-navbar"> Conf Bs As</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html#conferencia">La Coferencia</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#oradores">Los oradores</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#lugar">El lugar y la fecha</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#oradores">Conviertete en orador</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link texto-verde" href="ticket.html">Comprar tickets</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="promociones row justify-content-center">
+                <div class="m-2 border border-primary" style="width: 15rem;">
+                    <div class="card-body text-center">
+                        <h3>Estudiante</h3>
+                        <p ">Tienen un Descuento</p>
+                        <strong>80%</strong>
+                        <p>* presentar documentación</p>
+                    </div>
+                </div>
+                <div class="m-2 border border-info" style="width: 15rem;">
+                    <div class="card-body text-center">
+                        <h3>Trainee</h3>
+                        <p ">Tienen un Descuento</p>
+                        <strong>50%</strong>
+                        <p>* presentar documentación</p>
+                    </div>
+                </div>
+                <div class="m-2 border border-warning" style="width: 15rem;">
+                    <div class="card-body text-center">
+                        <h3>Junior</h3>
+                        <p ">Tienen un Descuento</p>
+                        <strong>15%</strong>
+                        <p>* presentar documentación</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="formCompra">
+                <div class="tituloForm text-uppercase text-center">
+                    <p>venta</p>
+                    <h2 class="fs-2 text">valor de ticket $200</h2>
+                </div>
+
+                <div class="form">
+                    <form>
+                        <div class="">
+                            <div class="d-flex">  
+                                <input type="text" class="form-control m-1" placeholder="Nombre">
+                                <input type="text" class="form-control m-1" placeholder="Apellido">
+                            </div>
+                            <div class="d-flex">
+                                <input type="email" class="form-control m-1" placeholder="Correo">
+                            </div>
+                            <div class="d-flex">
+                                <div class="m-1" style="width: 50%;">
+                                    <label class="form-label">Cantidad</label>
+                                    <input type="number" min="1" class="form-control" placeholder="Cantidad" id="cantidad">
+                                </div>
+                                <div class="m-1" style="width: 50%;">
+                                    <label class="form-label">Categoria</label>
+                                    <select class="form-select" id="categoria">
+                                        <option value="Estudiante">Estudiante</option>
+                                        <option value="Trainee">Trainee</option>
+                                        <option value="Junior">Junior</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="d-flex m-1">
+                                <input type="text" class="form-control form-control-lg" value="Total a Pagar: $" id="totalPagar" readonly>
+                            </div>
+                            <div class="m-1 d-flex justify-content-evenly">
+                                <button class="btn btn-danger" id="btnPagar" type="reset" onclick="total()">Borrar</button>
+                                <button class="btn btn-success" id="btnPagar" type="button" onclick="total()">Pagar</button>
+                            </div>
+                        </div>
+                        
+                      </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-3 my-4 footer-fondo">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-light">Preguntas Frecuentes</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-light">Contáctanos</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-light">Prensa</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-light">Conferencia</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-light">Términos y condiciones</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-light">Privacidad</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-light">Estudiantes</a></li>
+        </ul>
+    </footer>
+</body>
+</html>
